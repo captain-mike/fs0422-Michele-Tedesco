@@ -29,3 +29,15 @@ div{/*selezione attraverso il tag */
 .testo-verde{ /* selezione attraverso la classe */
     color: green;
 }
+
+span{
+    font-style: italic;
+}
+
+#area-grassetto > span{
+    font-weight:600;
+}
+
+#area-grassetto div span{
+    background-color: blue;
+}
