@@ -13,5 +13,6 @@ input:required{
     border: 1px solid red;
 }
 input:checked{
-    border: 1px solid green
+    height: 10px;
+    width: 10px;
 }

@@ -25,3 +25,7 @@ body{
     margin-top:20px;
     hyphens:auto;
 }
+#sezione3{
+    white-space:nowrap;
+    overflow:auto;
+}
