@@ -4,15 +4,15 @@
     text-align:center;
 }
 
-#main-header li{
+#menu > li{
     display: inline-block;
     transition: all 0.3s;
 }
 
-#main-header li:hover{
+#menu li:hover{
     background-color:#fff;
 }
-#main-header li:hover a{
+#menu li:hover > a{
     color:darkgreen;
 }
 
@@ -32,12 +32,14 @@
 
 
 #menu li > ul{
-    display:none;
+    height: 0;
     position: absolute;
     background-color: darkgreen;
+    width: 200px;
+    transition: height 0.3s;
 }
 #menu li:hover > ul{
-    display:block;
+   height: 150px;
 }
 
 
