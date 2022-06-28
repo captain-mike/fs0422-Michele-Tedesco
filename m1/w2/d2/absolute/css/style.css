@@ -19,10 +19,81 @@
 #area-blu{
     background-color:blue;
     height: 600px;
+    position: relative;
 }
 
 .blocco{
     background-color:red;
     width: 100px;
     height: 100px;
+    position: absolute;
+}
+
+.blocco:nth-of-type(1){
+    right: 10px;
+    top: 10px;
+}
+
+.blocco:nth-of-type(2){
+    left: 10px;
+    bottom: 10px;
+}
+.blocco:nth-of-type(3){
+    left: 10px;
+    top: 10px;
+}
+.blocco:nth-of-type(4){
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/*z index*/
+
+.container{
+    width:1000px;
+    margin:0 auto;
+    position: relative;
+}
+
+.blocco-colorato{
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #000;
+    position: absolute;
+}
+
+.blocco-colorato:nth-of-type(1){
+    background-color: red;
+    z-index: 3;
+}
+.blocco-colorato:nth-of-type(2){
+    background-color:yellow;
+    z-index: 4;
+    left: 100px;
+    top: 100px;
+}
+.blocco-colorato:nth-of-type(3){
+    background-color:green;
+    z-index: 3;
+    left: 200px;
+    top: 200px;
+}
+.blocco-colorato:nth-of-type(4){
+    background-color:blue;
+    z-index: 4;
+    left: 300px;
+    top: 300px;
+}
+.blocco-colorato:nth-of-type(5){
+    background-color:purple;
+    z-index: 5;
+    left: 400px;
+    top: 400px;
+}
+.blocco-colorato:nth-of-type(6){
+    background-color:pink;
+    z-index: 6;
+    left: 500px;
+    top: 500px;
 }
