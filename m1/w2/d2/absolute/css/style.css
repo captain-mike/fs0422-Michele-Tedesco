@@ -1,0 +1,28 @@
+.area-blocchi{
+    margin-top:300px;
+    position:relative;
+}
+.fascia{
+    background-color: #ccc;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#elemento-absolute{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+}
+/*esercizio 2*/
+#area-blu{
+    background-color:blue;
+    height: 600px;
+}
+
+.blocco{
+    background-color:red;
+    width: 100px;
+    height: 100px;
+}
