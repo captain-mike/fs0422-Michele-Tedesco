@@ -33,6 +33,7 @@
 
 #menu li > ul{
     height: 0;
+    overflow: hidden;
     position: absolute;
     background-color: darkgreen;
     width: 200px;
