@@ -29,3 +29,11 @@
 #n5{
     transform: skew(10deg);
 }
+#n6{
+    transition: transform 0.5s, background-color 2s ;
+    transition-delay: 1s, 0s;
+}
+#n6:hover{
+    transform: skew(10deg) scale(1.5) rotate(30deg);
+    background-color: yellow;
+}
