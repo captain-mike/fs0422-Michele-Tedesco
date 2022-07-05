@@ -37,7 +37,7 @@
         /*
         if
         */
-        let condizione = false;
+        let condizione = true;
         if(condizione){
             console.log('vero');
         }else{
@@ -45,23 +45,42 @@
         }
 
         let numero = 29;
+        console.log(numero > 30)//restituisce un boolean
 
         //la prima condizione risultante come vera blocca l'esecuzione dell'if
         if(numero > 30){
+
             console.log('superiore')
+
         }else if(numero == 30){
+
             console.log('uguale')
+
         }else{
             //nel caso in cui le condizioni non risultino vere viene eseguito l'else
             console.log('inferiore')
         }
 
 
+        /*
+        trabocchetto dell'assegnamento
+        */
         let h = 'Ciao';
         let l = 'Ciao1';
         if(h = l){
             console.log('vero')
             console.log(h, l)
+        }
+
+
+        let str = '';
+        if(str){//stringa vuota mappa a false
+            console.log('test');
+        }
+        
+        let num = 0;
+        if(num){
+            console.log('test');
         }
 
 
