@@ -31,6 +31,7 @@
  
         /*
         esercizio
+        mostra un orologio che si aggiorni con un intervallo di 1 secondo
         */
        let future = new Date();
        future.setMonth(future.getMonth() + 1);
@@ -44,6 +45,7 @@
             clock.innerHTML = time.toLocaleTimeString('it-IT',options)
             
        }, 1000);
+
        
     </script>
 </body>
