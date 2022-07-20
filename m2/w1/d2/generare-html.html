@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="memory"></div>
+
+    
+    <script>
+
+        let icone = ['@','#','+','%','&','£']
+        let memory = document.querySelector('#memory');
+
+        icone.concat(icone);
+
+        for( let icona of icone ){
+
+            let div = document.createElement('div');//genero un elemento dom
+            div.innerHTML = icona//scrivo qualcosa al suo interno
+            div.classList.add('card')//aggiungo una classe
+
+
+            memory.append(div)
+
+        }
+
+
+    </script>
+
+</body>
+</html>
