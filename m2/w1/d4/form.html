@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <style>
-        #myForm input, #myForm select{
+        #myForm input,
+        #myForm select {
             width: 100%;
             border: 1px solid #ccc;
         }
@@ -17,16 +20,31 @@
 
     <form id="myForm">
 
-        <input type="text" class="valida" id="nome" placeholder="nome">
-        <input type="email" class="valida" id="email" placeholder="email">
-        <input type="password" class="valida" id="password" placeholder="password">
-        <input type="password" class="valida" id="conferma-password" placeholder="Conferma password">
-        <select id="citta">
-            <option value="">Seleziona la città</option>
-            <option value="roma">Roma</option>
-            <option value="milano">Milano</option>
-            <option value="napoli">Napoli</option>
-        </select>
+        <div>
+            <input type="text" data-error="devi inserire il nome" class="valida" id="nome" placeholder="nome">
+            <span></span>
+        </div>
+        <div>
+            <input type="email" data-error="devi inserire l'email" class="valida" id="email" placeholder="email">
+            <span></span>
+        </div>
+        <div>
+            <input type="password" data-error="devi inserire la password" class="valida" id="password" placeholder="password">
+            <span></span>
+        </div>
+        <div>
+            <input type="password" data-error="devi riscrivere la password" class="valida" id="conferma-password" placeholder="Conferma password">
+            <span></span>
+        </div>
+        <div>
+            <select id="citta">
+                <option value="">Seleziona la città</option>
+                <option value="roma">Roma</option>
+                <option value="milano">Milano</option>
+                <option value="napoli">Napoli</option>
+            </select>
+            <span></span>
+        </div>
 
         <button>Registrati</button>
 
@@ -36,20 +54,28 @@
 
         let formButton = document.querySelector('#myForm button');
 
-        formButton.addEventListener('click',function(e){
+        formButton.addEventListener('click', function (e) {
             e.preventDefault();
 
             let campi = document.querySelectorAll('.valida');
-            let [,,password, confermaPassword] = campi
+            let [, , password, confermaPassword] = campi
 
             let valid = true;
 
-            for(let campo of campi){
-                if(!campo.value){
+            for (let campo of campi) {
+                if (!campo.value) {
                     campo.style.border = '1px solid red';
+
+                    let error = campo.getAttribute('data-error')
+                    let span = document.createElement('span');
+
+                    campo.nextElementSibling.innerHTML = error
+
                     valid = false
-                }else{
+                } else {
                     campo.style.border = '';
+                    
+                    campo.nextElementSibling.innerHTML = ''
                 }
 
             }
@@ -64,17 +90,17 @@
                 }
             })
             */
-            
-            if(password.value != confermaPassword.value){
+
+            if (password.value != confermaPassword.value) {
                 password.style.border = '1px solid red';
                 confermaPassword.style.border = '1px solid red';
                 valid = false
-            }else{
+            } else {
                 password.style.border = '';
                 confermaPassword.style.border = '';
             }
 
-            if(valid){
+            if (valid) {
                 //invia il form
                 console.log('inviato')
             }
@@ -83,6 +109,7 @@
 
 
     </script>
-    
+
 </body>
+
 </html>
