@@ -1,0 +1,16 @@
+[
+    {
+        "id": 93,
+        "nome": "Matilde O'Keefe",
+        "password": "$2y$10$92IXUNpkj",
+        "image": "img/foto1.png",
+        "created_at": "2022-04-19T23:46:11.000000Z"
+    },
+    {
+        "id": 94,
+        "nome": "Matilde Rossi",
+        "password": "$2y$10$92IXUNpkj",
+        "image": "img/foto2.jpg",
+        "created_at": "2022-04-19T23:46:11.000000Z"
+    }
+]

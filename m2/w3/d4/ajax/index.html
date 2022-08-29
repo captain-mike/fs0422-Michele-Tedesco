@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="d-none" id="card-template">
+
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link"></a>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    </div>
+        
+    <div id="lista"></div>
+    
+
+    <script>
+
+        const apiUrl = 'users.json';
+
+        const lista = document.querySelector('#lista');
+
+        fetch(apiUrl)
+        .then(res => res.json())
+        .then(res => {
+
+            console.log(res)
+
+            for(let user of res){
+
+                let card = document.querySelector('#card-template .card').cloneNode(true)
+                
+                let img = card.querySelector('.card-img-top')
+                img.src = user.image
+
+                let nameBox = card.querySelector('.card-title')
+                nameBox.innerText = user.nome
+                
+                lista.append(card)
+            }
+            
+
+        })
+
+    </script>
+</body>
+</html>
