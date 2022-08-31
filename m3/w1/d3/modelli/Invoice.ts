@@ -3,7 +3,7 @@ import { Address } from './Address'
 
 class Invoice{
     id:number|undefined;
-    date!:Date;
+    readonly date!:Date;
     expiration!:Date;
     userId!:number;
     user:User|undefined;

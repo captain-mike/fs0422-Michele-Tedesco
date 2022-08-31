@@ -1,4 +1,11 @@
-export class Address {
+export interface IAddress {
+    street:string;
+    city:string;
+    country:string;
+    zip:number;
+}
+
+export class Address implements IAddress{
     street:string;
     city:string;
     country:string;

@@ -47,10 +47,10 @@ class Bicicletta extends Veicolo{
         super(2,velMAx,false)
     }
 
-    accelera(vel: number) {
+    accelera(vel: number):void {
         this.vel++
     }
-    frena(vel: number) {
+    frena(vel: number):void {
         this.vel--
     }
 }
