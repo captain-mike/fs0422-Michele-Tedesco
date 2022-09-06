@@ -10,6 +10,8 @@ import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import { UtentiComponent } from './pages/utenti/utenti.component';
 import { UtentiDettaglioComponent } from './pages/utenti-dettaglio/utenti-dettaglio.component';
+import { UtentiCardComponent } from './pages/utenti-card/utenti-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { UtentiDettaglioComponent } from './pages/utenti-dettaglio/utenti-dettag
     ChiSiamoComponent,
     ContattiComponent,
     UtentiComponent,
-    UtentiDettaglioComponent
+    UtentiDettaglioComponent,
+    UtentiCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
