@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { User } from './Models/user';
 
 @Component({
@@ -8,7 +8,17 @@ import { User } from './Models/user';
 })
 export class AppComponent {
 
+  log(): void {
+    console.log(this.pippo)
+    this.pippo.nativeElement.style.color = 'red'
+  }
+
+  @ViewChild('pippo') pippo!:ElementRef;
+
   allUsers: User[] = []
+
+  visible:boolean = true
+  visibleCss:boolean = true
 
 
   addUser(event:User){
