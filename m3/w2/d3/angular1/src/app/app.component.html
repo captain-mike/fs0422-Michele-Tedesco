@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-form (onNewUserCreated)="addUser($event)"></app-form>
+    </div>
+    <div class="col-6">
+      <app-table [allItems]="allUsers"></app-table>
+    </div>
+  </div>
+</div>
