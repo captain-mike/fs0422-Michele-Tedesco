@@ -5,6 +5,7 @@ import { EditComponent } from './pages/posts/edit/edit.component';
 import { ListComponent } from './pages/posts/list/list.component';
 import { NewComponent } from './pages/posts/new/new.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { ProvaComponent } from './prova/prova.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,14 @@ const routes: Routes = [
         component:EditComponent
       }
     ]
+  },
+  {
+    path:'prova',
+    component:ProvaComponent,
+  },
+  {
+    path:'prova/:id/:nome',
+    component:ProvaComponent,
   }
 ];
 

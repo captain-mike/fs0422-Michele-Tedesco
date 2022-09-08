@@ -16,4 +16,10 @@ export class ListComponent implements OnInit {
     this.allPosts = this.postSvc.getAllPosts()
   }
 
+  deletePost(post: Post){
+    if(post.id){
+      this.postSvc.deletePost(post.id)
+      this.allPosts = this.postSvc.getAllPosts()
+    }
+  }
 }

@@ -10,6 +10,7 @@ import { EditComponent } from './pages/posts/edit/edit.component';
 import { ListComponent } from './pages/posts/list/list.component';
 import { HeaderComponent } from './sections/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ProvaComponent } from './prova/prova.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     NewComponent,
     EditComponent,
     ListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProvaComponent
   ],
   imports: [
     BrowserModule,

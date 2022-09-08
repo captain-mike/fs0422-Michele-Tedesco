@@ -19,13 +19,17 @@ export class EditComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    let postId:number = Number(this.activeRoute.snapshot.params['id'])
+    let postId:number = Number(this.activeRoute.snapshot.paramMap.get('id'))
     let post:Post|null = this.postSvc.getPostById(postId)
     if(post){
       this.currentPost = post
     }else{
-      //this.router.navigate(['/posts'])
+      this.router.navigate(['/posts'])
     }
+  }
+
+  save(){
+    this.postSvc.editPost(this.currentPost)
   }
 
 }
