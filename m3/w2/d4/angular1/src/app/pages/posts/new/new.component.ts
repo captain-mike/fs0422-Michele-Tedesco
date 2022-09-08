@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/Models/post';
+import { PostService } from 'src/app/post.service';
 
 @Component({
   selector: 'app-new',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
-  constructor() { }
+  newPost:Post = new Post('','');
+
+  constructor(private postSvc:PostService) { }
 
   ngOnInit(): void {
+  }
+
+  save(){
+    this.postSvc.addPost(this.newPost)
   }
 
 }

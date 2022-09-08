@@ -9,6 +9,7 @@ import { NewComponent } from './pages/posts/new/new.component';
 import { EditComponent } from './pages/posts/edit/edit.component';
 import { ListComponent } from './pages/posts/list/list.component';
 import { HeaderComponent } from './sections/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './sections/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

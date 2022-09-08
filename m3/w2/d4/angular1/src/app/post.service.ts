@@ -10,20 +10,29 @@ export class PostService {
 
   allPosts:Post[] = [];
 
+  lastId:number = 0;
+
   getAllPosts(){
     return this.allPosts
   }
-  getPostsById(id:string):Post|boolean{
-    let foundPost = this.allPosts.find(post => post.id === id)
-    return foundPost || false;
+  getPostById(id:number):Post|null{
+    console.log(this.allPosts)
+    let foundPost = this.allPosts.find((post:Post) => post.id == id)
+    console.log(foundPost)
+    return foundPost || null;
   }
 
   addPost(post:Post):void{
     post = Object.assign({}, post)//{...post}
+
+    //siccome non abbiamo un back end che definisce gli id
+    this.lastId++;
+    post.id = this.lastId
+
     this.allPosts.push(post);
   }
 
-  deletePost(id:string):void{
+  deletePost(id:number):void{
     this.allPosts = this.allPosts.filter((p:Post) => p.id != id)
   }
 

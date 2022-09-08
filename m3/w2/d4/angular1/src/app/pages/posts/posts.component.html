@@ -1,13 +1,4 @@
-<a [routerLink]="['/posts/new']" class="btn btn-success">Crea post</a>
-
-<div *ngFor="let post of allPosts" class="card">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{post.title}}</h5>
-    <p class="card-text">{{post.content}}</p>
-    <small class="card-text">{{post.date}}</small>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<a [routerLink]="['/posts']" class="btn btn-success">Tutti i post</a>
+<a [routerLink]="['/posts','new']" class="btn btn-success">Crea post</a>
 
 <router-outlet></router-outlet>
