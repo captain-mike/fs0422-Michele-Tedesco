@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./ngmodelgroup.component.scss']
 })
 export class NgmodelgroupComponent implements OnInit {
+
+  @ViewChild('form') form!: NgForm;
 
   constructor() { }
 
@@ -23,6 +25,31 @@ export class NgmodelgroupComponent implements OnInit {
 
   submit(form:NgForm){
     console.log(form)
+
+    this.form.reset()//resetta valori e status
+  }
+
+  riempi(){
+    console.log(this.form)
+    this.form.form.setValue({
+      name: 'Rossana',
+      lastname: 'Bianchi',
+      userAddress:{
+        street: 'Roma 54',
+        city: 'Milano',
+        zipcode: '63546'
+      }
+    })
+  }
+
+  aggiorna(){
+    this.form.form.patchValue({
+      userAddress:{
+        street: 'Roma 54',
+        city: 'Milano',
+        zipcode: '63546'
+      }
+    })
   }
 
 }

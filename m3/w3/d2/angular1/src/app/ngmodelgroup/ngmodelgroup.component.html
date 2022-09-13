@@ -11,25 +11,29 @@
         <input id="lastname" placeholder="lastname" [(ngModel)]="userForm.lastname"
         name="lastname" type="text" class="form-control">
       </div>
-      <div ngModelGroup="userAddress">
+      <div ngModelGroup="userAddress" #g="ngModelGroup">
+        <h6>Indirizzo</h6>
           <div class="form-group">
             <label for="street">street</label>
-            <input id="street" placeholder="street" [(ngModel)]="userForm.street"
+            <input id="street" required placeholder="street" [(ngModel)]="userForm.street"
             name="street" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="city">city</label>
-            <input id="city" placeholder="city" [(ngModel)]="userForm.city"
+            <input id="city" required placeholder="city" [(ngModel)]="userForm.city"
             name="city" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="zipcode">zipcode</label>
-            <input id="zipcode" placeholder="zipcode" [(ngModel)]="userForm.zipcode"
+            <input id="zipcode" required placeholder="zipcode" [(ngModel)]="userForm.zipcode"
             name="zipcode" type="text" class="form-control">
           </div>
       </div>
-
+      <p *ngIf="g.invalid && g.dirty">Errore nel gruppo: devi compilare correttamente i campi relativi all'indirizzo</p>
       <button class="btn btn-primary">Invia</button>
     </form>
   </div>
 </div>
+
+<button class="btn btn-success" (click)="riempi()">Rimepi form</button>
+<button class="btn btn-success" (click)="aggiorna()">Rimepi indirizzong</button>
