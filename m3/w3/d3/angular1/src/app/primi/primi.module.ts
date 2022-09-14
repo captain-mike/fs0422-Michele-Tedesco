@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { PrimiListComponent } from './primi-list/primi-list.component';
 import { PrimiDetailComponent } from './primi-detail/primi-detail.component';
 import { PrimiItemComponent } from './primi-item/primi-item.component';

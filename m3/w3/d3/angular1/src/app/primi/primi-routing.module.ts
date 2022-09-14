@@ -6,17 +6,17 @@ import { PrimiDetailComponent } from './primi-detail/primi-detail.component';
 
 const routes:Routes = [
   {
-    path: '',
+    path: '',// primi
     component: PrimiComponent,
     children: [
       {
-        path:'',
+        path:'',// primi
         component: PrimiListComponent
       }
     ]
   },
   {
-    path: 'detail/:id',
+    path: 'detail/:id', // primi/detail/5
     component: PrimiDetailComponent
   }
 ]
